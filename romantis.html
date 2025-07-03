@@ -1,0 +1,157 @@
+<!-- romantis.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anniversary Adam & Rahma 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand&display=swap" rel="stylesheet">
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: #fff0f5;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    header {
+      height: 100vh;
+      background: url('foto.jpg') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4rem;
+      animation: fadeIn 2s ease;
+    }
+    header p {
+      font-size: 1.5rem;
+      margin-top: 10px;
+      animation: fadeIn 3s ease;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1s ease;
+    }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    section {
+      padding: 40px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      background: #f06292;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    audio {
+      display: block;
+      margin: 30px auto 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Happy Anniversary 💖</h1>
+  <p>Adam & Rahma - 2 to 10/married</p>
+</header>
+
+<section class="fade-in">
+  <h2 style="font-family: 'Great Vibes', cursive; font-size: 2.5rem; margin-bottom: 20px;">Untuk Rahma, dari Adam 💌</h2>
+  <p style="font-size: 1.2rem; line-height: 1.8;">
+    Sayang, di setiap detik yang kita lewati bersama, aku menemukan alasan baru untuk jatuh cinta padamu.<br><br>
+    Senyummu adalah pelita di setiap hariku, dan cintamu adalah pelukan hangat di tengah dunia yang dingin.<br><br>
+    Hari ini, di hari jadi kita, aku ingin kau tahu bahwa tak ada tempat yang lebih indah daripada berada di sampingmu.<br><br>
+    Aku bersyukur dipertemukan denganmu — wanita luar biasa yang selalu sabar, hangat, dan penuh cinta.<br><br>
+    Mari kita ukir lebih banyak cerita, lebih banyak tawa, dan cinta yang tak akan pernah pudar.<br><br>
+    Terima kasih karena telah mencintaiku. Aku janji, akan selalu berusaha menjadi yang terbaik untukmu.<br><br>
+    Selamat anniversary, cinta. Aku mencintaimu, sekarang dan selamanya. 💖
+  </p>
+</section>
+
+<section class="fade-in">
+  <h2 style="font-family: 'Great Vibes', cursive; font-size: 2.5rem; margin-bottom: 20px;">Momen-Momen Kita 📸</h2>
+  <div class="gallery">
+    <img src="foto1.jpeg">
+    <img src="foto2.jpeg">
+    <img src="foto3.jpeg">
+    <img src="foto4.jpeg">
+    <img src="foto5.jpeg">
+    <img src="foto6.jpeg">
+    <img src="foto7.jpeg">
+    <img src="foto8.jpeg">
+    <img src="foto9.jpeg">
+    <img src="foto10.jpeg">
+    <img src="foto11.jpeg">
+    <img src="foto12.jpeg">
+    <img src="foto13.jpeg">
+    <img src="foto14.jpeg">
+    <img src="foto15.jpeg">
+  </div>
+</section>
+
+<section class="fade-in">
+  <h2 style="margin-bottom: 20px;">Lagu Spesial Kita 🎶</h2>
+ <audio id="laguku" autoplay loop>
+  <source src="lagu.mp3" type="audio/mpeg">
+  Browser kamu tidak mendukung audio.
+</audio>
+
+</section>
+
+<footer>
+  &copy; 2025 | Dibuat dengan cinta oleh Adam untuk Rahma 💗
+</footer>
+
+<script>
+  // Animasi scroll muncul
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Autoplay lagu setelah interaksi dari index.html
+  window.addEventListener("DOMContentLoaded", () => {
+    const lagu = document.getElementById("laguku");
+    lagu.play().catch(() => {
+      console.warn("Autoplay ditolak, browser butuh interaksi pengguna.");
+    });
+  });
+</script>
+
+
+</body>
+</html>

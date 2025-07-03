@@ -1,0 +1,51 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Awas Link Scam!! 😏</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffe6e6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      margin: 0;
+    }
+    .button {
+      position: absolute;
+      padding: 20px 40px;
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <button class="button" onclick="moveButton()">Rahma Botak 😝</button>
+
+  <script>
+    let clickCount = 0;
+    const button = document.querySelector('.button');
+
+    function moveButton() {
+      if (clickCount < 7) {
+        const x = Math.random() * (window.innerWidth - 150);
+        const y = Math.random() * (window.innerHeight - 60);
+        button.style.left = `${x}px`;
+        button.style.top = `${y}px`;
+        clickCount++;
+      } else {
+        window.location.href = 'romantis.html';
+      }
+    }
+  </script>
+</body>
+</html>
